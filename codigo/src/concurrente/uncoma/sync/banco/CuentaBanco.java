@@ -1,4 +1,4 @@
-package concurrente.uncoma.sync;
+package concurrente.uncoma.sync.banco;
 
 public class CuentaBanco {
     private int balance = 50;

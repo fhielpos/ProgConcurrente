@@ -1,4 +1,4 @@
-package concurrente.uncoma.sync;
+package concurrente.uncoma.sync.banco;
 
 public class VerificarCuenta implements Runnable {
     private CuentaBanco cb = new CuentaBanco();
