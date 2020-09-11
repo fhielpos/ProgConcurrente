@@ -6,3 +6,7 @@ Repositorio de la materia *Programación Concurrente*, año 2020.
 ### TP2 - Thread
 
 * [Código fuente](/codigo/src/concurrente/uncoma/thread)
+
+### TP3 - Synchronized
+
+* [Código fuente](/codigo/src/concurrente/uncoma/sync)
