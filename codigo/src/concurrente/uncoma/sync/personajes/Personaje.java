@@ -16,8 +16,8 @@ public class Personaje extends Thread {
     }
 
     public void run() {
-        int rand = new Random().nextInt(5);
-        for (int i = 0; i < rand; i++) {
+        // int rand = new Random().nextInt(5);
+        for (int i = 0; i < 5; i++) {
             this.vida.operarVida(this.valor);
         }
     }

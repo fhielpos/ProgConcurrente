@@ -16,6 +16,8 @@ public class Vida {
             System.out.println(Thread.currentThread().getName() + " está operando sobre la vida");
             System.out.println("Vida actual: " + this.vida);
             this.vida = this.vida + valor;
+            if (this.vida < 0)
+                this.vida = 0;
             System.out.println("Vida nueva: " + this.vida);
         } else {  // Estoy muerto
             System.out.println("Ya estoy muerto.");

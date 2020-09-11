@@ -1,7 +1,7 @@
 # TP 3 - Synchronized
 
 ## Ej 2
-
+## Enunciado
     2) Realice un programa en donde se muestre el comportamiento de dos personajes que
     alteran nuestro puntos de VIDA (recurso compartido) que se inicializa con 10, de la
     siguiente manera:
@@ -16,3 +16,28 @@
         b) ¿Qué puede concluir?
         c) Ahora modifique el programa utilizando alguna herramienta para sincronizar la
         ejecución.
+
+
+## Respuestas
+### A)
+    
+Resultados finales:
+```
+Ya estoy muerto.
+```
+```
+Ya estoy muerto.
+```
+```
+Orco está operando sobre la vida
+Vida actual: 13
+Vida nueva: 10
+```
+
+### B) 
+   
+Al no estar sincronizado, en ocaciones termino muerto, cuando debería quedar con 10 de vida siempre.
+
+### C)
+
+Se sincroniza el metodo operarVida() de Vida.
