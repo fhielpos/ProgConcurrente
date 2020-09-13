@@ -35,7 +35,7 @@ public class Auto extends Vehiculo implements Runnable {
         return this.patente;
     }
 
-    private void recorrer(int kilometros) throws InterruptedException{
+    private void recorrer(int kilometros) throws InterruptedException {
         if (this.reserva) {
             // System.out.println("En reserva, debe cargar nafta");
         } else {
@@ -54,26 +54,36 @@ public class Auto extends Vehiculo implements Runnable {
         this.reserva = false;
     }
 
+    public String toString(){
+        return ("Auto: " + this.patente);
+    }
+
     @Override
     public void run() {
         int kilometros = 0;
-        for (int i = 0; i < 2; i++) {
-            kilometros = new Random().nextInt(12) * 100;
+        for (int i = 0; i < 3; i++) {
+            // Cantidad de kilometros a recorrer entre 100 y 1000
+            kilometros = (new Random().nextInt(10) + 1) * 100;
             System.out.println(Thread.currentThread().getName() + " recorriendo: " + kilometros);
+
             try {
                 this.recorrer(kilometros);
-            } catch (InterruptedException ex){
+            } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
-            if (this.reserva) {
+            // Si en reserva, intentar cargar
+            while (this.reserva) {
                 System.out.println(Thread.currentThread().getName() + " en reserva, yendo a cargar");
                 try {
                     if (this.surtidor.ocupar()) {
                         // Cargando 600km
                         System.out.println(Thread.currentThread().getName() + " cargando nafta");
                         this.cargarNafta(600);
-                    } else
+                    } else {
+                        // Surtidor ocupado, esperar
                         System.out.println("Surtidor ocupado");
+                        Thread.sleep(1500);
+                    }
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
