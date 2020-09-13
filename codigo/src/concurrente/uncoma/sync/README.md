@@ -2,9 +2,9 @@
 
 ## Ejercicios:
 
-1. [Banco](sync/banco)
-2. [Personajes](sync/personajes)
-3. [Escritores](sync/escritores)
-4. [Surtidor](sync/surtidor)
+1. [Banco](/banco)
+2. [Personajes](/personajes)
+3. [Escritores](/escritores)
+4. [Surtidor](/surtidor)
 5. Semáforo
-6. [Arreglo](sync/arreglo)
+6. [Arreglo](/arreglo)
