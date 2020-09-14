@@ -13,9 +13,6 @@
     
     * El arreglo debe llenarse con números enteros entre 1 y 10 generados
     aleatoriamente. Nota: utilizar la clase Random de java.
-    Facultad de Informática
-    Programación Concurrente - Departamento de Programación
-    2020
     * Habrá k hilos, entre los cuales se dividirá el trabajo a realizar: cada uno debe
     ocuparse de proporcionar la suma parcial de un segmento del arreglo.
     * Habrá un programa principal que creará y rellenará el arreglo de datos, y
