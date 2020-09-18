@@ -16,12 +16,14 @@ public class Main {
         curandero.start();
         orco.start();
 
-        try{
+        try {
             curandero.join();
             orco.join();
-        } catch (InterruptedException ex) { ex.printStackTrace();}
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
 
-        System.out.println("Vida final: " +vida.getVida());
+        System.out.println("Vida final: " + vida.getVida());
     }
 
 }

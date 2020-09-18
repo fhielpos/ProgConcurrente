@@ -4,27 +4,29 @@ import java.util.Random;
 
 public class Auto extends Vehiculo implements Runnable {
     private String patente;
-    private int kmFaltantes;
+    private int kmNafta;
     private int kilometraje = 0;
     private boolean reserva = false;
     private Surtidor surtidor;
+    private int kmFaltantesService;
 
     public Auto(String unaPatente, int kmRestantes, Surtidor unSurtidor) {
         this.patente = unaPatente;
-        this.kmFaltantes = kmRestantes;
+        this.kmNafta = kmRestantes;
         this.surtidor = unSurtidor;
+        this.kmFaltantesService = 10000;
     }
 
     public Auto(String unaMarca, String unModelo, String unaPatente, int kmRestantes, Surtidor unSurtidor) {
         super(unaMarca, unModelo);
         this.patente = unaPatente;
-        this.kmFaltantes = kmRestantes;
+        this.kmNafta = kmRestantes;
         this.surtidor = unSurtidor;
 
     }
 
     public int getKmFaltantes() {
-        return this.kmFaltantes;
+        return this.kmNafta;
     }
 
     public int getKilometraje() {
@@ -41,16 +43,16 @@ public class Auto extends Vehiculo implements Runnable {
         } else {
             Thread.sleep(1000);
             this.kilometraje = this.kilometraje + kilometros;
-            this.kmFaltantes = this.kmFaltantes - kilometros;
-            if (this.kmFaltantes <= 0) {
+            this.kmNafta = this.kmNafta - kilometros;
+            if (this.kmNafta <= 0) {
                 this.reserva = true;
-                this.kmFaltantes = 0;
+                this.kmNafta = 0;
             }
         }
     }
 
     private void cargarNafta(int nuevosKm) {
-        this.kmFaltantes = this.kmFaltantes + nuevosKm;
+        this.kmNafta = this.kmNafta + nuevosKm;
         this.reserva = false;
     }
 
