@@ -38,7 +38,7 @@ Al no estar sincronizado, en ocaciones termino con menos o más vida ya que ambo
 
 ### C)
 
-Se sincronizan los metodos que modifican vida para que los métodos no se pisen. Estos son `descontar(int vida)` y `curar(int vida)`"
+Se sincronizan los metodos que modifican vida para que los métodos no se pisen. Estos son `descontar(int vida)` y `curar(int vida)`
 
 Salida final:
 
