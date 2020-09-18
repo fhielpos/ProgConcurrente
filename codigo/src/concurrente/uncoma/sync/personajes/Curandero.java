@@ -15,6 +15,11 @@ public class Curandero extends Personaje{
     public void run() {
         for (int i=0;i<10;i++){
             this.curar();
+            try{
+                Thread.sleep(250);
+            }catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 }

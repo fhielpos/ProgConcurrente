@@ -21,23 +21,27 @@
 ## Respuestas
 ### A)
     
-Resultados finales:
+Resultados obtenidos:
 ```
-Ya estoy muerto.
-```
-```
-Ya estoy muerto.
+Vida final: 7
 ```
 ```
-Orco está operando sobre la vida
-Vida actual: 13
-Vida nueva: 10
+Vida final: 13
+```
+```
+Vida final: 10
 ```
 
 ### B) 
    
-Al no estar sincronizado, en ocaciones termino muerto, cuando debería quedar con 10 de vida siempre.
+Al no estar sincronizado, en ocaciones termino con menos o más vida ya que ambos acceden a la misma variable al mismo tiempo, cuando debería quedar con 10 de vida siempre.
 
 ### C)
 
-Se sincroniza el metodo operarVida() de Vida.
+Se sincronizan los metodos que modifican vida para que los métodos no se pisen. Estos son `descontar(int vida)` y `curar(int vida)`"
+
+Salida final:
+
+```
+Vida final: 10
+```
