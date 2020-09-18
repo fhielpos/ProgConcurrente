@@ -8,3 +8,5 @@
 4. [Surtidor](surtidor)
 5. Semáforo
 6. [Arreglo](arreglo)
+7. Supermercado
+8. [Hamsters](hamsters)
