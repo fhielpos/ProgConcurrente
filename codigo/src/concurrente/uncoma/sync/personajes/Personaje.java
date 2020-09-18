@@ -2,9 +2,9 @@ package concurrente.uncoma.sync.personajes;
 
 import java.util.Random;
 
-public class Personaje extends Thread {
-    private int valor;
-    private Vida vida;
+public abstract class Personaje extends Thread {
+    public int valor;
+    public Vida vida;
 
     public Personaje(int unValor, Vida unaVida) {
         this.valor = unValor;
@@ -13,13 +13,6 @@ public class Personaje extends Thread {
 
     public int getValor() {
         return this.valor;
-    }
-
-    public void run() {
-        // int rand = new Random().nextInt(5);
-        for (int i = 0; i < 5; i++) {
-            this.vida.operarVida(this.valor);
-        }
     }
 
 }
