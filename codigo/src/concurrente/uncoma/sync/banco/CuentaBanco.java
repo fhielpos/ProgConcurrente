@@ -6,7 +6,7 @@ public class CuentaBanco {
     public CuentaBanco() {
     }
 
-    public int getBalance()  {
+    public int getBalance() {
         return balance;
     }
 

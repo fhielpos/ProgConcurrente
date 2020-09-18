@@ -54,7 +54,7 @@ public class Auto extends Vehiculo implements Runnable {
         this.reserva = false;
     }
 
-    public String toString(){
+    public String toString() {
         return ("Auto: " + this.patente);
     }
 
@@ -71,6 +71,7 @@ public class Auto extends Vehiculo implements Runnable {
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
+
             // Si en reserva, intentar cargar
             while (this.reserva) {
                 System.out.println(Thread.currentThread().getName() + " en reserva, yendo a cargar");
