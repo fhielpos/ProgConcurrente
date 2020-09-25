@@ -49,6 +49,13 @@ public class SyncObject {
     d. ¿Cuál es la diferencia entre el yield() y sleep()?
     e. Indique el funcionamiento general de lo presentado.
 
+### Respuestas
+
+1. Thread.yield() le va a avisar al planificador de procesos que el thread actual puede esperar, y el planificador puede decidir darle el procesador a otro thread, o continuar ejecutando el thread que invoco el Thread.yield.
+2. Es un bloque sincronizado que utiliza el lock de syncObject para que solo un hilo por vez pueda ejecutar el bloque de codigo.
+3. Es un bloque sincronizado que utiliza su propio lock para que un solo hilo por vez pueda ejecutar el metodo.
+4. La diferencia es que sleep() duerme el hilo por un tiempo determinado sin importar la situacion, mientras que yield solo suspende la ejecucion del hilo si el planificado lo considera necesario, de lo contrario continua ejecutandose con normalidad.
+
 ## Ej 2
 ### Enunciado
 
